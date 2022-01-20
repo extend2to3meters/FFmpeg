@@ -193,6 +193,7 @@ static int config_enc_params(EbSvtAv1EncConfiguration *param,
     param->qp                       = svt_enc->qp;
 
     param->target_bit_rate          = avctx->bit_rate;
+    param->max_bit_rate          = avctx->rc_max_rate;
 
     if (avctx->gop_size > 0)
         param->intra_period_length  = avctx->gop_size - 1;
